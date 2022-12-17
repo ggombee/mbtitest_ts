@@ -4,6 +4,7 @@ import { Button, Image } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 import PangImage from "../assets/ggompang.jpeg";
+import Header from "../components/Header";
 
 function MainPage(): React.ReactElement {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function MainPage(): React.ReactElement {
   return (
     <>
       <Wrapper>
-        <Header>😼 예비집사 판별기 😼</Header>
+        <Header type="title" questionNo={0} />
         <ContentsWrapper>
           <Title>나에게 맞는 주인님은?!</Title>
           <LogoImage>
@@ -49,15 +50,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   background: #fffacd;
-  font-family: "Jalnan";
-`;
-
-const Header = styled.div`
-  background: #ffa07a;
-  font-size: 40pt;
-  align-items: center;
-  display: flex;
-  justify-content: center;
   font-family: "Jalnan";
 `;
 
