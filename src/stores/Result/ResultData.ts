@@ -21,7 +21,7 @@ export const ResultData: IResult[] = [
   {
     id: 1,
     name: "러시안 블루",
-    best: "ESTJ",
+    best: "ESTJ", //집사의 MBTI
     mbti: "ISFJ",
     desc: "겁이 많아요.워낙 온순한 성격에 조용한 고양이라 소심하게 느껴집니다! 낯을 심하게 가리는 편이구요.혼자 놔두면 호기심이 많아서 이것저것 치고 건드리고 즐겁게 보내는 고양이입니다.초보 애묘가가 키우기 좋은 묘종입니다.",
     image: `${Russianblue}`,
