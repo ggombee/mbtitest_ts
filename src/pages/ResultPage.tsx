@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Image, Button } from "react-bootstrap";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 import { ResultData } from "../stores/Result/ResultData";
 import Header from "../components/Header";
@@ -22,6 +22,7 @@ function ResultPage(): React.ReactElement {
     mbti: "",
   }; // 잘맞는 고양이
   const friendCat = ResultData.find(friend => friend.best === testResult?.mbti); // 고양이와 잘맞는 형제묘
+  const navigate = useNavigate();
 
   return (
     <>
@@ -49,6 +50,7 @@ function ResultPage(): React.ReactElement {
           </BestDesc>
           <div style={{ marginBottom: 30 }}>
             <Button
+              onClick={() => navigate("/")}
               className="btn-danger"
               style={{ width: 170, marginTop: 20, marginRight: 20 }}
             >

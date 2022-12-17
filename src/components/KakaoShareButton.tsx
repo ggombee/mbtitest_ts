@@ -7,12 +7,14 @@ interface Props {
   data: IResult;
 }
 
-function KakaoShareButton(props: Props) {
+function KakaoShareButton(props: Props): React.ReactElement {
   const url = "https://mbtitestts.netlify.app";
   const resultUrl = window.location.href;
 
   React.useEffect(() => {
-    Kakao.init("bb036b86ddc876308abcec82315ace52");
+    if (!Kakao.isInitialized) {
+      Kakao.init("bb036b86ddc876308abcec82315ace52");
+    }
   }, []);
 
   const shareKakao = () => {
