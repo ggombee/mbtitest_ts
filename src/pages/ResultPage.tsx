@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, Image } from "react-bootstrap";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Image } from "react-bootstrap";
+import { useSearchParams } from "react-router-dom";
 
 import { ResultData } from "../stores/Result/ResultData";
 import Header from "../components/Header";
-import PangImage from "../assets/ggompang.jpeg";
 import { IResult } from "../stores/Result/types";
 
 function ResultPage(): React.ReactElement {
   const [searchParmas] = useSearchParams();
   const mbti = searchParmas.get("mbti"); // 예비집사의 MBTI
-  const testResult = ResultData.find((cat: IResult) => cat.best === mbti);
-  const friendCat = ResultData.find(friend => friend.best === testResult?.mbti);
+  const testResult = ResultData.find((cat: IResult) => cat.best === mbti); // 잘맞는 고양이
+  const friendCat = ResultData.find(friend => friend.best === testResult?.mbti); // 고양이와 잘맞는 형제묘
 
   return (
     <>
