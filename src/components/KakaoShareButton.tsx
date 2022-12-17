@@ -12,7 +12,7 @@ function KakaoShareButton(props: Props): React.ReactElement {
   const resultUrl = window.location.href;
 
   React.useEffect(() => {
-    if (!Kakao.isInitialized) {
+    if (!Kakao.isInitialized()) {
       Kakao.init("bb036b86ddc876308abcec82315ace52");
     }
   }, []);
@@ -21,7 +21,7 @@ function KakaoShareButton(props: Props): React.ReactElement {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: "😼 예비집사 판별기 결과😼",
+        title: "😼예비집사 판별기 결과😼",
         description: `예비 집사님이 고양이를 키운다면 가장 잘맞는 고양이는 ${props.data.name}입니다.`,
         imageUrl: url + props.data.image,
         link: {
