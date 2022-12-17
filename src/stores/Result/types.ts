@@ -4,4 +4,5 @@ export interface IResult {
   best: string;
   desc: string;
   image: string;
+  mbti: string;
 }
