@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     "react/no-unescaped-entities": 0, //''사용할수 있게 해줌
     "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
 };
