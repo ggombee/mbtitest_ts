@@ -50,7 +50,7 @@ function KakaoShareButton(props: Props): React.ReactElement {
     <Button
       onClick={shareKakao}
       className="btn-warning"
-      style={{ width: 170, marginTop: 20 }}
+      style={{ width: 150, marginTop: 20 }}
     >
       공유하기
     </Button>

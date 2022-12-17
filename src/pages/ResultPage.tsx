@@ -42,17 +42,21 @@ function ResultPage(): React.ReactElement {
             {testResult?.best}형 예비집사님과 찰떡궁합인 고양이는{" "}
             {testResult?.mbti}형 고양이 {testResult?.name}입니다.
           </Desc>
+          <br />
           <Desc>
             {testResult?.name} 고양이는 {testResult?.desc}
           </Desc>
+          <br />
           <BestDesc>
             나의 고양이와 잘맞는 형제묘로는 {friendCat?.name} 추천드려요.
           </BestDesc>
-          <div style={{ marginBottom: 30 }}>
+          <div
+            style={{ marginBottom: 30, display: "flex", flexDirection: "row" }}
+          >
             <Button
               onClick={() => navigate("/")}
               className="btn-danger"
-              style={{ width: 170, marginTop: 20, marginRight: 20 }}
+              style={{ width: 150, marginTop: 20, marginRight: 20 }}
             >
               테스트 다시하기
             </Button>
@@ -85,7 +89,6 @@ const ContentsWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 20px;
   font-size: 25pt;
 `;
 
@@ -97,7 +100,7 @@ const ResultImage = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 15pt;
+  font-size: 13pt;
 `;
 
 const BestDesc = styled.div`

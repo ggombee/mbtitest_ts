@@ -23,7 +23,7 @@ function Header(props: Props) {
         </ProgressWrapper>
       ) : (
         <TitleWrapper style={{ backgroundColor: "#ffa07a" }}>
-          😼 예비집사 판별기 😼
+          😼예비집사 판별기😼
         </TitleWrapper>
       )}
     </>
@@ -43,7 +43,7 @@ const ProgressWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   background: #ffa07a;
-  font-size: 40pt;
+  font-size: 30pt;
   align-items: center;
   display: flex;
   justify-content: center;
